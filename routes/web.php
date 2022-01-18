@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/about', function () {
     return view('about' , [
+        "title" => "about",
         "nama" => "fatikhul rafi musaffa",
         "email" => "fatihmusyafa72@gmail.com",
         "gambar" => "images/profile.jpg"
@@ -22,10 +23,14 @@ Route::get('/about', function () {
 });
 
 Route::get('/', function () {
-    return view('home');
+    return view('home', [
+        "title" => "home"
+    ]);
 });
 
 Route::get('/gallery', function () {
-    return view('gallery');
+    return view('gallery', [
+        "title" => "gallery"
+    ]);
 });
 
