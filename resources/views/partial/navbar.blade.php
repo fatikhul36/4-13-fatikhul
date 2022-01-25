@@ -15,6 +15,9 @@
         <li class="nav-item">
           <a class="nav-link {{($title === 'gallery') ? 'active' : ''}} "  aria-current="page" href="/galery">galery</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link {{($title === 'contacts') ? 'active' : ''}} "  aria-current="page" href="/contacts">contacts</a>
+        </li>
       </ul>
     </div>
   </div>

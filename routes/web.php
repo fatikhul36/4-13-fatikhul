@@ -34,3 +34,5 @@ Route::get('/gallery', function () {
     ]);
 });
 
+Route::resource('/contacts',ContactController::class);
+use App\Http\Controllers\ContactController;
