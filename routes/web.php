@@ -23,8 +23,8 @@ Route::get('/about', function () {
 });
 
 Route::get('/', function () {
-    return view('home', [
-        "title" => "home"
+    return view('index', [
+        "title" => "beranda"
     ]);
 });
 
@@ -36,3 +36,9 @@ Route::get('/gallery', function () {
 
 use App\Http\Controllers\ContactController;
 Route::resource('/contacts',ContactController::class);
+Auth::routes();
+
+Route::group(['middleware' => ['auth']], Function () {
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+});
+    

@@ -19,6 +19,13 @@
           <a class="nav-link {{($title === 'contacts') ? 'active' : ''}} "  aria-current="page" href="/contacts">contacts</a>
         </li>
       </ul>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{{route ('login')}}">login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{route ('register')}}">register</a>
+        </li>
     </div>
   </div>
 </nav>
