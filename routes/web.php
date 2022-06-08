@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,11 +35,16 @@ Route::get('/gallery', function () {
     ]);
 });
 
-use App\Http\Controllers\ContactController;
+
 Route::resource('/contacts',ContactController::class);
+Route::get('/contacts/create', [ContactController::class, 'create'])->name('contacts.create');
+Route::post('/contacts/store', [ContactController::class, 'store'])->name('contacts.store');
 Auth::routes();
 
 Route::group(['middleware' => ['auth']], Function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/contacts', [ContactController::class, 'index'])->name('contacts');
+    Route::post('/contacts/{id}/update', [ContactController:: class,'update'])->name('contacts.update');
+    Route::get('/contacts/{id}/destroy', [ContactController:: class,'destroy'])->name('contacts.destroy');
 });
     

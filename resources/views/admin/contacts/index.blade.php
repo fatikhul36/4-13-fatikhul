@@ -36,14 +36,13 @@
                                                     <a href="{{ route('contacts.edit', $contact->id)}}"><i class="far fa-edit"></i></a>
                                                     <a href="{{ route('contacts.destroy', $contact->id)}}"><i class="fas fa-trash" style="color:red"></i></a>
                                                 </td>   
-                                                
                                             </tr> 
                                             @endforeach
                                             
                                             
                                            
                                         </tbody>
-                                        {{ $contacts->links() }}
+                                        {{$contacts -> links() }}
                                     </table>
                                     
                                     

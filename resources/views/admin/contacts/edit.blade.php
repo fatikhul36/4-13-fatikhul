@@ -11,19 +11,19 @@
                                         <strong>Form Edit</strong> Contact Us
                                     </div>
                                     <div class="card-body card-block">
-                                        <form action="{{ route('contacts.update', $contact->id)}}" method="post" class="">
+                                        <form action="{{ route('contacts.update', $contacts->id)}}" method="post" class="">
                                             {{ csrf_field() }}
                                             <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Nama</label>
-                                                <input type="text" name="nama" class="form-control" value="{{ $contact->nama}}">
+                                                <input type="text" name="nama" class="form-control" value="{{ $contacts->nama}}">
                                             </div>
                                             <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Email</label>
-                                                <input type="email" name="email"  class="form-control" value="{{ $contact->email}}" >
+                                                <input type="email" name="email"  class="form-control" value="{{ $contacts->email}}" >
                                             </div>
                                             <div class="form-group">
                                                 <label for="nf-password" class=" form-control-label">Pesan</label>
-                                                <textarea name="pesan" class="form-control">{{ $contact->pesan}}</textarea>
+                                                <textarea name="pesan" class="form-control">{{ $contacts->pesan}}</textarea>
                                             </div>
                                             <div class="card-footer">
                                                 <button type="submit" class="btn btn-primary btn-sm">
